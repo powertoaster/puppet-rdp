@@ -76,9 +76,9 @@ class rdp (
     ensure       => present,
     direction    => 'in',
     action       => 'allow',
-    enabled      => 'true',
+    enabled      => true,
     protocol     => 'TCP',  
-    local_port   => '3389',
+    local_port   => 3389,
     display_name => 'Remote Desktop - Puppet',
     description  => 'This exception allows RDP access (TCP 3389)',
     }
