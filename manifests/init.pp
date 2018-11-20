@@ -17,7 +17,7 @@
 # == Requires:
 #  puppetlabs/registry
 #  puppetlabs/stdlib
-#  rmsphd/windows_firewall
+#  puppet/windows_firewall
 #
 # == Sample Usage:
 #
@@ -76,8 +76,8 @@ class rdp (
     ensure       => present,
     direction    => 'in',
     action       => 'allow',
-    enabled      => 'yes',
-    protocol     => 'TCP',
+    enabled      => 'true',
+    protocol     => 'TCP',  
     local_port   => '3389',
     display_name => 'Remote Desktop - Puppet',
     description  => 'This exception allows RDP access (TCP 3389)',
